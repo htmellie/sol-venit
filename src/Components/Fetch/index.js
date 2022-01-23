@@ -1,5 +1,9 @@
 import React from "react";
 
+async function getSomeStats() {
+  const response = await fetch("");
+}
+
 function Fetch() {
   return (
     <div>
