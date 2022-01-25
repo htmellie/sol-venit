@@ -19,7 +19,7 @@ function Fetch({ date }) {
   useEffect(() => {
     async function getSomeStats() {
       const response = await fetch(
-        `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=${date}`
+        `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=${formattedDate}`
       );
       const data = await response.json();
       setSunrise(data.results.sunrise);
