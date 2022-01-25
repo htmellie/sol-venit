@@ -1,10 +1,8 @@
-import ReactDatePicker from "react-datepicker";
+import DatePicker from "react-date-picker";
 import React, { Component } from "react";
-import PropTypes from "prop-types";
 
-function DatePicker({ prop2, name1 }) {
-  console.log(prop2, name1);
-  return <ReactDatePicker />;
+function PickTheDate({ date, setDate }) {
+  return <DatePicker onChange={setDate} value={date} format={"dd-MM-y"} />;
 }
 
-export default DatePicker;
+export default PickTheDate;

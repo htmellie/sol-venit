@@ -1,10 +1,20 @@
 import React, { useEffect, useState } from "react";
 
-function Fetch() {
+function Fetch({ date }) {
   const [sunrise, setSunrise] = useState("");
   const lat = 52.4862;
   const lng = 1.8904;
-  const date = "2022-03-27";
+  // const date = "2022-03-27";
+  const stringDate = date.toLocaleDateString();
+  console.log(stringDate);
+  // const hyphenDate = stringDate.replaceAll("/", "-");
+  // console.log(hyphenDate);
+  const arrDate = stringDate.split("/");
+  console.log(arrDate);
+  const reverseDate = arrDate.reverse();
+  console.log(reverseDate);
+  const formattedDate = arrDate.join("-");
+  console.log(formattedDate);
 
   useEffect(() => {
     async function getSomeStats() {
